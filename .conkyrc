@@ -21,8 +21,10 @@ draw_outline no
 draw_shades no
 
 use_xft yes
-#xftfont TakaoGothic:style=Regular:size=12
+# xftfont TakaoGothic:style=Regular:size=12
 xftfont Ructy:style=Regular:size=16
+# xftfont Bitstream Vera Sans:style=Regular:size=15
+
 
 override_utf8_locale yes
 out_to_console no
@@ -47,10 +49,10 @@ cpu_avg_samples 4
 #maximum_width 1366
 
 #${offset 1909}
-#${voffset 958}
+#${voffset 986}
 
-#${offset 1366}
-#${voffset 768}
+#${offset 1355}
+#${voffset 677}
 
 TEXT
 ${offset 1355}
