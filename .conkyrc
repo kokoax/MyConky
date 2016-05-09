@@ -1,4 +1,4 @@
-lua_load /home/kokoax/scripts/conky-script.lua
+lua_load ~/scripts/firstConfig/conky-script.lua
 # lua_load ~/scripts/conky-script.lua
 # lua_load ~/scripts/conky-script.lua
 
@@ -22,7 +22,7 @@ draw_shades no
 
 use_xft yes
 # xftfont TakaoGothic:style=Regular:size=12
-xftfont Ructy:style=Regular:size=16
+xftfont Ricty:style=Regular:size=16
 # xftfont Bitstream Vera Sans:style=Regular:size=15
 
 
@@ -45,16 +45,19 @@ own_window_transparent yes
 
 cpu_avg_samples 4
 
-#minimum_size 1366 768
-#maximum_width 1366
+# minimum_size 1366 768
+# maximum_width 1366
 
-#${offset 1909}
-#${voffset 986}
+# ${offset 1909}
+# ${voffset 986}
 
-#${offset 1355}
-#${voffset 677}
+# ${offset 1355}
+# ${voffset 677}
 
+# ${image ~/.WeatherIcon/png/02.png -p 50, 50, 1x1}
+
+# ${offset 240}${upspeedgraph wlp1s0 15,130 000000 ffffff}
+# ${offset 1000}${downspeedgraph wlp1s0 15,130 000000 ffffff}
 TEXT
 ${offset 1355}
-${voffset 677}
-
+${voffset 704}

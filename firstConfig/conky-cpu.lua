@@ -1,3 +1,26 @@
+function leftArc( cr, arcWidth, size, per )
+  local angle1 = 135.0 * ( math.pi/180 )
+  local angle2 = 225.0 * ( math.pi/180 )
+
+  local dist = angle1 - angle2
+
+  cairo_set_line_width( cr, arcWidth * perWidth )
+  cairo_arc( cr, win_wid/2, win_hei/2 + 20, size, angle1, angle2 + dist - ( dist * per ) )
+  cairo_stroke( cr )
+end
+
+function rightArc( cr, arcWidth, size, per )
+  local angle1 = 315.0 * ( math.pi/180 )
+  local angle2 = 405.0 * ( math.pi/180 )
+
+  local dist = angle1 - angle2
+
+  cairo_set_line_width( cr, arcWidth * perWidth )
+  cairo_arc( cr, win_wid/2, win_hei/2 + 20, size, angle1, angle2 + ( dist - ( dist * per ) ) )
+
+  cairo_stroke( cr )
+end
+
 function CPUText( cr, x, y, text )
   cairo_select_font_face( cr, font_takao, font_slant, font_face )
 
@@ -68,4 +91,5 @@ function CPUGraph( cr )
 
   CPUText( cr )
 end
+
 
