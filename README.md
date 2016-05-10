@@ -1,28 +1,16 @@
 # My Conky with lua configs 
 ----
 ## firstConfig
-### 使い方( usage )
-- conky install
-
- - Debian
-
-        sudo apt-get install conky
-
- - Arch
-
-        sudo pacman install conky-lua
-
-- .conkyrc
+- Files
+ - .conkyrc
       cp (repository name)/.conkyrc ~/.conkyrc
 
-- .
-      cp (repository name)/.conkyrc ~/.conkyrc
+ - firstConfig
+      cp (repository name)/firstConfig ~/scripts/firstConfig
 
-- .conkyrc
-      cp (repository name)/.conkyrc ~/.conkyrc
-----
-### 依存関係
-- mariaDB( MySQL )
+ - weatherScripts
+      cp (repository name)/weatherScripts ~/scripts/weatherScripts
 
-----
+- Dependences
+ - mariaDB( MySQL )
 

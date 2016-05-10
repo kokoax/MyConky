@@ -45,14 +45,14 @@ end
 
 -- function putWeather( cr )
 Weather.putWeather = function( cr )
-  local image_today = cairo_image_surface_create_from_png( "~/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weatherScripts/weather -0 -i" )..".png" )
-  local image_tomorrow = cairo_image_surface_create_from_png( "~/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weatherScripts/weather -1 -i" )..".png" )
-  local image_day_after = cairo_image_surface_create_from_png( "~/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weatherScripts/weather -2 -i" )..".png" )
+  local image_today = cairo_image_surface_create_from_png( tostring( os.getenv( "HOME" ) ) .. "/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( tostring( os.getenv( "HOME" ) ) .. "/scripts/weatherScripts/weather -0 -i" )..".png" )
+  local image_tomorrow = cairo_image_surface_create_from_png( tostring( os.getenv( "HOME" ) ) .. "/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( tostring( os.getenv( "HOME" ) ) .. "/scripts/weatherScripts/weather -1 -i" )..".png" )
+  local image_day_after = cairo_image_surface_create_from_png( tostring( os.getenv( "HOME" ) ) .. "/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( tostring( os.getenv( "HOME" ) ) .. "/scripts/weatherScripts/weather -2 -i" )..".png" )
 
   local widToday = cairo_image_surface_get_width( image_today)
   local heiToday = cairo_image_surface_get_height( image_today)
   local widTomo  = cairo_image_surface_get_width( image_tomorrow )
-  local heiTom   = cairo_image_surface_get_height( image_tomorrow )
+  local heiTomo  = cairo_image_surface_get_height( image_tomorrow )
   local widDA    = cairo_image_surface_get_width( image_day_after )
   local heiDA    = cairo_image_surface_get_height( image_day_after )
 
@@ -60,11 +60,11 @@ Weather.putWeather = function( cr )
   cairo_set_source_surface( cr, image_today,    win_wid*0.8 - widToday, win_hei/4.5 )
   cairo_paint( cr )
 
-  -- tomorrow
+  -- -- tomorrow
   cairo_set_source_surface( cr, image_tomorrow, win_wid*0.8 - widTomo, win_hei/4.5 + 64 + 30 )
   cairo_paint( cr )
 
-  -- day after tomorrow
+  -- -- day after tomorrow
   cairo_set_source_surface( cr, image_day_after, win_wid*0.8 - widTomo, win_hei/4.5 + 64*2 + 30*2 )
   cairo_paint( cr )
 

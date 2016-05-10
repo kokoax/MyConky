@@ -77,8 +77,8 @@ function conky_cairo_main()
     CPU.CPUGraph( cr )
     Volume.volumeCircleGraph( cr )
     Battery.batteryCircleGraph( cr )
-    Weather.putWeather( cr )
     Calendar.calendarCircle( cr )
+    Weather.putWeather( cr )
   end
   -- MpdStatus( cr )
 
