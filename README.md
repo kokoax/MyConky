@@ -1,5 +1,4 @@
 # My Conky with lua configs 
-----
 ## firstConfig
 - Files
  - .conkyrc
