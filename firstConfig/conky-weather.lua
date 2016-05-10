@@ -1,11 +1,11 @@
 Weather = {}
 
 function weatherDiscliption( cr, x, y, day )
-  local Discription = tostring( Archive.command( "~/scripts/weather -"..day.." -c" ) )
-  local LargeTemp = Archive.command( "~/scripts/weather -"..day.." -lt" )
-  local SmallTemp = Archive.command( "~/scripts/weather -"..day.." -st" )
+  local Discription = tostring( Archive.command( "~/scripts/weatherScripts/weather -"..day.." -c" ) )
+  local LargeTemp = Archive.command( "~/scripts/weatherScripts/weather -"..day.." -lt" )
+  local SmallTemp = Archive.command( "~/scripts/weatherScripts/weather -"..day.." -st" )
 
-  local localYear, localMonth, localDay = string.match( Archive.command( "~/scripts/weather -"..day.." -day" ), "(%d%d%d%d)(%d%d)(%d%d)" )
+  local localYear, localMonth, localDay = string.match( Archive.command( "~/scripts/weatherScripts/weather -"..day.." -day" ), "(%d%d%d%d)(%d%d)(%d%d)" )
 
   -- print( localMonth )
   -- print( localDay )
@@ -45,9 +45,9 @@ end
 
 -- function putWeather( cr )
 Weather.putWeather = function( cr )
-  local image_today = cairo_image_surface_create_from_png( "/home/kokoax/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weather -0 -i" )..".png" )
-  local image_tomorrow = cairo_image_surface_create_from_png( "/home/kokoax/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weather -1 -i" )..".png" )
-  local image_day_after = cairo_image_surface_create_from_png( "/home/kokoax/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weather -2 -i" )..".png" )
+  local image_today = cairo_image_surface_create_from_png( "~/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weatherScripts/weather -0 -i" )..".png" )
+  local image_tomorrow = cairo_image_surface_create_from_png( "~/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weatherScripts/weather -1 -i" )..".png" )
+  local image_day_after = cairo_image_surface_create_from_png( "~/scripts/weatherScripts/.WeatherIcon/png/64/"..Archive.command( "~/scripts/weatherScripts/weather -2 -i" )..".png" )
 
   local widToday = cairo_image_surface_get_width( image_today)
   local heiToday = cairo_image_surface_get_height( image_today)
