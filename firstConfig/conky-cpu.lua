@@ -1,3 +1,5 @@
+CPU = {}
+
 function leftArc( cr, arcWidth, size, per )
   local angle1 = 135.0 * ( math.pi/180 )
   local angle2 = 225.0 * ( math.pi/180 )
@@ -31,7 +33,7 @@ function CPUText( cr, x, y, text )
   cairo_stroke( cr )
 end
 
-function CPUGraph( cr )
+CPU.CPUGraph = function( cr )
   -- CPU 1
   cairo_set_source_rgba( cr, 0.4, 0.4, 0.4, 0.1 )
   leftArc( cr, 40, 250, 1 )
@@ -92,4 +94,5 @@ function CPUGraph( cr )
   CPUText( cr )
 end
 
+return CPU
 

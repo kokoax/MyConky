@@ -60,4 +60,4 @@ cpu_avg_samples 4
 # ${offset 1000}${downspeedgraph wlp1s0 15,130 000000 ffffff}
 TEXT
 ${offset 1355}
-${voffset 704}
+${voffset 712}
