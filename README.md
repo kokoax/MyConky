@@ -2,13 +2,13 @@
 ## firstConfig
 - Files
  - .conkyrc
-      cp (repository name)/.conkyrc ~/.conkyrc
+      cp /path/to/repo/.conkyrc ~/.conkyrc
 
  - firstConfig
-      cp (repository name)/firstConfig ~/scripts/firstConfig
+      cp -r /path/to/repo/firstConfig ~/scripts/firstConfig
 
  - weatherScripts
-      cp (repository name)/weatherScripts ~/scripts/weatherScripts
+      cp -r /path/to/repo/weatherScript ~/scripts/weatherScripts
 
 - Dependences
  - mariaDB( MySQL )
