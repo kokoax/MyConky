@@ -35,8 +35,8 @@ end
 
 Calendar.calendarCircle = function( cr )
   local i = 0
-  local today_last  = Archive.command( "LANG=C date +'%d' -d \"1 days ago `date +%Y%m01 -d '+1 month'`\"" )
-  local before_last = Archive.command( "LANG=C date +'%d' -d \"2 days ago `date +%Y%m01 -d '+1 month'`\"" )
+  local today_last  = Archive.command( "LC_ALL=C date +'%d' -d \"1 days ago `date +%Y%m01 -d '+1 month'`\"" )
+  local before_last = Archive.command( "LC_ALL=C date +'%d' -d \"2 days ago `date +%Y%m01 -d '+1 month'`\"" )
 
   local calWid = win_wid/8
   local calHei = win_hei/2.5
@@ -64,7 +64,7 @@ Calendar.calendarCircle = function( cr )
 
   i = 0
   for index, item in ipairs( calBubble ) do
-    local weekName= tostring( Archive.command( "LANG=C date +'%a' -d '" .. tostring( i - 3 ) .. " days'" ) )
+    local weekName= tostring( Archive.command( "LC_ALL=C date +'%a' -d '" .. tostring( i - 3 ) .. " days'" ) )
     if( i == 3 ) then
       -- cairo_set_source_rgba( cr, 1, 1, 1, 0.4 )
       setWeekColor( weekName, 0.4 )
@@ -92,8 +92,8 @@ Calendar.calendarCircle = function( cr )
 
   i = 0
   for index, item in ipairs( calBubble ) do
-    local day = tostring( tonumber( tostring( Archive.command( "LANG=C date +'%d' -d '" .. tostring( i - 3 ) .. " days'" ) ) ) )
-    local weekName= tostring( Archive.command( "LANG=C date +'%a' -d '" .. tostring( i - 3 ) .. " days'" ) )
+    local day = tostring( tonumber( tostring( Archive.command( "LC_ALL=C date +'%d' -d '" .. tostring( i - 3 ) .. " days'" ) ) ) )
+    local weekName= tostring( Archive.command( "LC_ALL=C date +'%a' -d '" .. tostring( i - 3 ) .. " days'" ) )
 
     if( i == 3 ) then
       cairo_set_font_size( cr, 24 )
@@ -141,9 +141,9 @@ Calendar.calendarCircle = function( cr )
   cairo_set_font_size( cr, 36 )
   cairo_set_source_rgba( cr, 0.7, 0.7, 0.7, 0.8 )
   -- setWeekColor( weekName, 0.6 )
-  local year = Archive.command( "LANG=C date '+%Y'" )
-  local month = Archive.command( "LANG=C date '+%B'" )
-  -- local month = Archive.command( "LANG=C date '+%B' -d '4 month'" )
+  local year = Archive.command( "LC_ALL=C date '+%Y'" )
+  local month = Archive.command( "LC_ALL=C date '+%B'" )
+  -- local month = Archive.command( "LC_ALL=C date '+%B' -d '4 month'" )
   cairo_move_to( cr, calWid-8.5*#year, calHei )
   cairo_show_text( cr, year )
 
