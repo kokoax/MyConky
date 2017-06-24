@@ -1,15 +1,18 @@
-# My Conky with lua configs 
+# My Conky with lua configs
 ## firstConfig
-- Files
- - .conkyrc
-      cp /path/to/repo/.conkyrc ~/.conkyrc
+### Files
+- .conkyrc
+  - cp /path/to/repo/.conkyrc ~/.conkyrc
 
- - firstConfig
-      cp -r /path/to/repo/firstConfig ~/scripts/firstConfig
+- firstConfig
+  - cp -r /path/to/repo/firstConfig ~/scripts/firstConfig
 
- - weatherScripts
-      cp -r /path/to/repo/weatherScript ~/scripts/weatherScripts
+- weatherScripts
+  - cp -r /path/to/repo/weatherScripts ~/scripts/weatherScripts
+  - And setting. Please refer README from https://github.com/kokoax/weatherScripts
+### Image
+![Image of firstConfig](https://github.com/kokoax/MyConky/firstConfig/image/first_config.png "first_config.png")
 
 - Dependences
- - mariaDB( MySQL )
+  - mariaDB( MySQL )
 
