@@ -1,0 +1,3 @@
+[submodule "weatherScripts"]
+	path = weatherScripts
+	url = https://github.com/kokoax/weatherScripts.git
