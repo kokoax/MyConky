@@ -9,7 +9,7 @@
 
 - weatherScripts
   - cp -r /path/to/repo/weatherScripts ~/scripts/weatherScripts
-  - And setting. Please refer README from https://github.com/kokoax/weatherScripts
+  - And setting. Please refer README to https://github.com/kokoax/weatherScripts
 ### Image
 ![Image of firstConfig](https://github.com/kokoax/MyConky/blob/master/firstConfig/image/first_config.png "first_config.png")
 
